@@ -1,0 +1,10 @@
+C:\Users\14015\Desktop\git\VSProjects\CalculadoraDerivadas\CalculadoraDerivadas\bin\Debug\CalculadoraDerivadas.exe.config
+C:\Users\14015\Desktop\git\VSProjects\CalculadoraDerivadas\CalculadoraDerivadas\bin\Debug\CalculadoraDerivadas.exe
+C:\Users\14015\Desktop\git\VSProjects\CalculadoraDerivadas\CalculadoraDerivadas\bin\Debug\CalculadoraDerivadas.pdb
+C:\Users\14015\Desktop\git\VSProjects\CalculadoraDerivadas\CalculadoraDerivadas\obj\Debug\CalculadoraDerivadas.csprojAssemblyReference.cache
+C:\Users\14015\Desktop\git\VSProjects\CalculadoraDerivadas\CalculadoraDerivadas\obj\Debug\CalculadoraDerivadas.Form1.resources
+C:\Users\14015\Desktop\git\VSProjects\CalculadoraDerivadas\CalculadoraDerivadas\obj\Debug\CalculadoraDerivadas.Properties.Resources.resources
+C:\Users\14015\Desktop\git\VSProjects\CalculadoraDerivadas\CalculadoraDerivadas\obj\Debug\CalculadoraDerivadas.csproj.GenerateResource.cache
+C:\Users\14015\Desktop\git\VSProjects\CalculadoraDerivadas\CalculadoraDerivadas\obj\Debug\CalculadoraDerivadas.csproj.CoreCompileInputs.cache
+C:\Users\14015\Desktop\git\VSProjects\CalculadoraDerivadas\CalculadoraDerivadas\obj\Debug\CalculadoraDerivadas.exe
+C:\Users\14015\Desktop\git\VSProjects\CalculadoraDerivadas\CalculadoraDerivadas\obj\Debug\CalculadoraDerivadas.pdb
