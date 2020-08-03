@@ -275,8 +275,13 @@ namespace CalculadoraDerivadas
         #region --------------- Validar terminos --------------
         private bool terminoValido(string t)
         {
-            if (Char.IsNumber(t, 0) || esFuncionTrigonometrica(t) || esOperador(t) || t.Equals("x") || t.Equals("(") || t.Equals(")")) return true;
-            return false;
+            if (esFuncionTrigonometrica(t) || esOperador(t) || t.Equals("x") || t.Equals("X") || t.Equals("(") || t.Equals(")")) return true;
+
+            foreach (char c in t)
+            {
+                if (!Char.IsDigit(c)) return false;
+            }
+            return true;
         }
         private bool esFuncionTrigonometrica(string t)
         {
