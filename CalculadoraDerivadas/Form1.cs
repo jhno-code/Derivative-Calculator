@@ -12,16 +12,31 @@ namespace CalculadoraDerivadas
 {
     public partial class Form1 : Form
     {
+        private String Funcion;
+        private String[] TokenFuncion;
+        private String Derivada;
         public Form1()
         {
             InitializeComponent();
         }
 
+        #region ------------ Clicks en botones ------------
         private void btMostrar_Click(object sender, EventArgs e)
         {
             lblMostrar.Text = txtFuncion.Text;
         }
+        private void btDerivar_Click(object sender, EventArgs e)
+        {
+            Funcion = txtFuncion.Text;
+            tokenizar();
+            derivar();
+        }
+
         #region *------- Aumentar valores a txtFunction, calculadora -------*
+        private void btX_Click(object sender, EventArgs e)
+        {
+            aumentarTxtBox("X");
+        }
         private void btNumero0_Click(object sender, EventArgs e)
         {
             aumentarTxtBox("0");
@@ -100,6 +115,10 @@ namespace CalculadoraDerivadas
         private void btDivision_Click(object sender, EventArgs e)
         {
             aumentarTxtBox("/");
+        }
+        private void btPotencia_Click(object sender, EventArgs e)
+        {
+            aumentarTxtBox("^()");
         }
 
         private void btSen_Click(object sender, EventArgs e)
@@ -214,5 +233,73 @@ namespace CalculadoraDerivadas
         }
         #endregion -----
 
+        #endregion
+
+        #region ---------------- Tokenizer ------------------
+        private void tokenizar()
+        {
+            TokenFuncion =  Funcion.Split(' ');
+        }
+        #endregion
+
+        #region --------------- Derivar -----------
+        private void derivar()
+        {
+            if (valido())
+            {
+                hallarDerivada();
+                //lblMostrar.Text = Derivada;
+                lblMostrar.Text = Funcion;
+            }
+            else lblMostrar.Text = "ERROR!, FUNCION NO VALIDA.";
+        }
+        private void hallarDerivada()
+        {
+
+        }
+        #endregion
+
+        #region ----------- Validar -----------
+        private bool valido()
+        {
+            String[] t = TokenFuncion;
+            // verificar si existen variables desconocidas
+            foreach (string s in t)
+            {
+                if (!terminoValido(s)) return false;
+            }
+            // Verificar si existen errores de funcion
+
+            return true;
+        }
+        #region --------------- Validar terminos --------------
+        private bool terminoValido(string t)
+        {
+            if (Char.IsNumber(t, 0) || esFuncionTrigonometrica(t) || esOperador(t) || t.Equals("x") || t.Equals("(") || t.Equals(")")) return true;
+            return false;
+        }
+        private bool esFuncionTrigonometrica(string t)
+        {
+            string[] a = { "sen", "cos", "tan", "ctan", "sec", "csec" };
+            for (int k = 0; k < a.Length; k++)
+            {
+                if (t.Equals(a[k]) || t.Equals(a[k] + "h") || t.Equals("a" + a[k])) return true;
+            }
+            return false;
+        }
+        private bool esOperador(string t)
+        {
+            string[] a = { "+", "-", "*", "/", "^" };
+            for (int k = 0; k < a.Length; k++)
+            {
+                if (t.Equals(a[k])) return true;
+            }
+            return false;
+        }
+        #endregion
+
+        #region ----------------- Validar string (funcion) -------------
+        #endregion
+        #endregion
     }
 }

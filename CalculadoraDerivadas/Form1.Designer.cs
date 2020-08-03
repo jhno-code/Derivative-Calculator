@@ -31,7 +31,7 @@
             this.lblFuncion = new System.Windows.Forms.Label();
             this.txtFuncion = new System.Windows.Forms.TextBox();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.btnDerivar = new System.Windows.Forms.Button();
+            this.btDerivar = new System.Windows.Forms.Button();
             this.btNumero0 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btNumero9 = new System.Windows.Forms.Button();
@@ -70,6 +70,8 @@
             this.btMostrar = new System.Windows.Forms.Button();
             this.lblMostrar = new System.Windows.Forms.Label();
             this.btBorrar = new System.Windows.Forms.Button();
+            this.btX = new System.Windows.Forms.Button();
+            this.btPotencia = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblFuncion
@@ -97,14 +99,15 @@
             this.lblTitulo.TabIndex = 2;
             this.lblTitulo.Text = "Calculadora de Derivadas";
             // 
-            // btnDerivar
+            // btDerivar
             // 
-            this.btnDerivar.Location = new System.Drawing.Point(635, 60);
-            this.btnDerivar.Name = "btnDerivar";
-            this.btnDerivar.Size = new System.Drawing.Size(75, 23);
-            this.btnDerivar.TabIndex = 3;
-            this.btnDerivar.Text = "Derivar";
-            this.btnDerivar.UseVisualStyleBackColor = true;
+            this.btDerivar.Location = new System.Drawing.Point(635, 60);
+            this.btDerivar.Name = "btDerivar";
+            this.btDerivar.Size = new System.Drawing.Size(75, 23);
+            this.btDerivar.TabIndex = 3;
+            this.btDerivar.Text = "Derivar";
+            this.btDerivar.UseVisualStyleBackColor = true;
+            this.btDerivar.Click += new System.EventHandler(this.btDerivar_Click);
             // 
             // btNumero0
             // 
@@ -448,7 +451,7 @@
             // 
             // btLimpiar
             // 
-            this.btLimpiar.Location = new System.Drawing.Point(508, 146);
+            this.btLimpiar.Location = new System.Drawing.Point(538, 146);
             this.btLimpiar.Name = "btLimpiar";
             this.btLimpiar.Size = new System.Drawing.Size(75, 23);
             this.btLimpiar.TabIndex = 38;
@@ -476,7 +479,7 @@
             // 
             // btBorrar
             // 
-            this.btBorrar.Location = new System.Drawing.Point(508, 117);
+            this.btBorrar.Location = new System.Drawing.Point(538, 117);
             this.btBorrar.Name = "btBorrar";
             this.btBorrar.Size = new System.Drawing.Size(75, 23);
             this.btBorrar.TabIndex = 41;
@@ -484,11 +487,33 @@
             this.btBorrar.UseVisualStyleBackColor = true;
             this.btBorrar.Click += new System.EventHandler(this.btBorrar_Click);
             // 
+            // btX
+            // 
+            this.btX.Location = new System.Drawing.Point(469, 117);
+            this.btX.Name = "btX";
+            this.btX.Size = new System.Drawing.Size(24, 23);
+            this.btX.TabIndex = 42;
+            this.btX.Text = "X";
+            this.btX.UseVisualStyleBackColor = true;
+            this.btX.Click += new System.EventHandler(this.btX_Click);
+            // 
+            // btPotencia
+            // 
+            this.btPotencia.Location = new System.Drawing.Point(589, 88);
+            this.btPotencia.Name = "btPotencia";
+            this.btPotencia.Size = new System.Drawing.Size(24, 23);
+            this.btPotencia.TabIndex = 43;
+            this.btPotencia.Text = "^";
+            this.btPotencia.UseVisualStyleBackColor = true;
+            this.btPotencia.Click += new System.EventHandler(this.btPotencia_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btPotencia);
+            this.Controls.Add(this.btX);
             this.Controls.Add(this.btBorrar);
             this.Controls.Add(this.lblMostrar);
             this.Controls.Add(this.btMostrar);
@@ -527,7 +552,7 @@
             this.Controls.Add(this.btNumero9);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btNumero0);
-            this.Controls.Add(this.btnDerivar);
+            this.Controls.Add(this.btDerivar);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.txtFuncion);
             this.Controls.Add(this.lblFuncion);
@@ -543,7 +568,7 @@
         private System.Windows.Forms.Label lblFuncion;
         private System.Windows.Forms.TextBox txtFuncion;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Button btnDerivar;
+        private System.Windows.Forms.Button btDerivar;
         private System.Windows.Forms.Button btNumero0;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btNumero9;
@@ -582,6 +607,8 @@
         private System.Windows.Forms.Button btMostrar;
         private System.Windows.Forms.Label lblMostrar;
         private System.Windows.Forms.Button btBorrar;
+        private System.Windows.Forms.Button btX;
+        private System.Windows.Forms.Button btPotencia;
     }
 }
 
